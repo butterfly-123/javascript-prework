@@ -11,5 +11,5 @@ function clearMessages(){
 var computerMove, playerMove;
 computerMove = 'kamień';
 printMessage('Zagrałem ' + computerMove + '! Jeśli Twój ruch to papier, to wygrywasz!');
-playerMove = 'kamień';
+playerMove = 'papier';
 printMessage('Zagrałem ' + playerMove + '! Jeśli Twój ruch to kamień, to przegrywasz!');
