@@ -14,9 +14,6 @@ printMessage('Zagrałem ' + computerMove + '! Jeśli Twój ruch to papier, to wy
 playerMove = 'papier';
 printMessage('Zagrałem ' + playerMove + '! Jeśli Twój ruch to kamień, to przegrywasz!');
 
-var randomNumber;
-randomNumber = Math.floor(Math.random() * 9 + 11);
-printMessage('Wylosowana liczba to: ' + randomNumber);
 
 var computerMove, randomNumber;
 randomNumber = Math.floor(Math.random() * 3 + 1);
@@ -33,13 +30,14 @@ printMessage('Mój ruch: ' + computerMove);
 var playerMove, playerInput;
 playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 console.log('Wpisana odpowiedź to: ' + playerInput);
+
 if (playerInput == '1') {
   playerMove = 'kamień';
 } else if (playerInput == '2') {
   playerMove = 'papier';
 } else if (playerInput == '3') {
-    playerMove = 'nożyce'
-} else (playerInput == '') {
+    playerMove = 'nożyce';
+} else {
     playerMove = prompt('Wybrałeś niewłaściwy numer! Spróbuj jeszcze raz.');
 }
 printMessage('Twój ruch: ' + playerMove);
