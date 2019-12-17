@@ -26,6 +26,6 @@ if (randomNumber == '1') {
 } else if (randomNumber == 2) {
     computerMove = 'papier';
 } else if (randomNumber == 3) {
-    computerMove = 'noyce';
+    computerMove = 'nozyce';
 }
 printMessage('Mój ruch: ' + computerMove);
