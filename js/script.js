@@ -79,7 +79,7 @@ function displayResult(argPlayerMove, argComputerMove) {
   printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
 }
 
-var buttonPaper, buttonRock, buttonTest;
+var buttonPaper, buttonRock, buttonTest, argButtonName;
 
 function buttonClicked(argButtonName) {
   clearMessages();
