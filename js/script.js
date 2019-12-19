@@ -8,15 +8,6 @@ function clearMessages(){
 	document.getElementById('messages').innerHTML = '';
 }
 
-/** 
-var computerMove, playerMove;
-computerMove = 'kamień';
-printMessage('Zagrałem ' + computerMove + '! Jeśli Twój ruch to papier, to wygrywasz!');
-playerMove = 'papier';
-printMessage('Zagrałem ' + playerMove + '! Jeśli Twój ruch to kamień, to przegrywasz!');
-*/
-
-/**
 var computerMove, randomNumber;
 randomNumber = Math.floor(Math.random() * 3 + 1);
 console.log('wylosowana liczba to: ' + randomNumber);
@@ -25,12 +16,21 @@ if (randomNumber == '1') {
 } else if (randomNumber == '2') {
   computerMove = 'papier';
 } else if (randomNumber == '3') {
-  computerMove = 'nożyce';
+  computerMove = 'nożyczki';
+} else {
+  computerMove = 'nieznany ruch';
 }
 printMessage('Mój ruch: ' + computerMove);
-*/
 
 /** 
+var computerMove, playerMove;
+computerMove = 'kamień';
+printMessage('Zagrałem ' + computerMove + '! Jeśli Twój ruch to papier, to wygrywasz!');
+playerMove = 'papier';
+printMessage('Zagrałem ' + playerMove + '! Jeśli Twój ruch to kamień, to przegrywasz!');
+*/
+
+
 var playerMove, playerInput;
 playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 console.log('Wpisana odpowiedź to: ' + playerInput);
@@ -42,16 +42,13 @@ if (playerInput == '1') {
 } else if (playerInput == '3') {
   playerMove = 'nożyce';
 } else {
-  playerMove = prompt('Wybrałeś niewłaściwy numer! Spróbuj jeszcze raz.');
+  playerMove = prompt('Nieznany ruch');
 }
 printMessage('Twój ruch: ' + playerMove);
-*/
+
+
 
 var argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber;
-
-/**
- * Describe this function...
- */
 
 function getMoveName(argMoveId) {
   console.log('wywołano funkcję getMoveName z argumentem: ' + argMoveId);
@@ -65,10 +62,6 @@ function getMoveName(argMoveId) {
     printMessage('Nie znam ruchu o id ' + argMoveId + 'Spróbuj jeszcze raz!');
   }
 }
-
-/**
- * Describe this function...
- */
 
 function displayResult(argPlayerMove, argComputerMove) {
   console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
@@ -86,13 +79,7 @@ function displayResult(argPlayerMove, argComputerMove) {
   printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
 }
 
-
-
-
 var buttonPaper, buttonRock, buttonTest;
-/**
- * Describe this function...
- */
 
 function buttonClicked(argButtonName) {
   clearMessages();
@@ -101,12 +88,15 @@ function buttonClicked(argButtonName) {
 var buttonTest;
 buttonTest = document.getElementById('button-test');
 buttonTest.addEventListener('click', function() { buttonClicked('Guzik TEST'); });
+var buttonRock;
 buttonRock = document.getElementById('button-rock');
 buttonRock.addEventListener('click', function(){ buttonClicked('Guzik kamień'); });
+var buttonPaper;
 buttonPaper = document.getElementById('button-paper');
 buttonPaper.addEventListener('click', function(){ buttonClicked('Guzik paper'); });
-buttonTest = document.getElementById('button-scissors');
-buttonTest.addEventListener('click', function(){ buttonClicked('Guzik nożyce'); });
+var buttonScissors;
+buttonScissors = document.getElementById('button-scissors');
+buttonScissors.addEventListener('click', function(){ buttonClicked('Guzik nożyce'); });
 
 playerMove = argButtonName;
 randomNumber = Math.floor(Math.random() * 3 + 1);
