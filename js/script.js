@@ -100,7 +100,7 @@ function buttonClicked(argButtonName) {
 }
 var buttonTest;
 buttonTest = document.getElementById('button-test');
-buttonTest.addEventListener('click', function(){ buttonClicked('Guzik TEST'); });
+buttonTest.addEventListener('click', function() { buttonClicked('Guzik TEST'); });
 buttonRock = document.getElementById('button-rock');
 buttonRock.addEventListener('click', function(){ buttonClicked('Guzik kamień'); });
 buttonPaper = document.getElementById('button-paper');
