@@ -9,9 +9,11 @@ body {
 }
 
 #button-test {
-    margin-left: 400px;
+    margin-left: 375px;
     margin-top: 50px;
     margin-bottom: 100px;
+    width: 200px;
+    height: 100px;
 }
 
 button {
@@ -33,11 +35,22 @@ button:hover {
 
 #buttons {
     border: 3px solid black;
-    margin-top: 50px;
+    margin-top: 70px;
     padding-bottom: 100px; 
     width: 80%;
     margin-left: 100px;
     background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2kH-Tb75JM1mFNkRFSe-868rQwq43bn6ExQA1JtM_24wokar-Lw&s');
     box-shadow: 10px 10px 15px grey;
     object-fit: cover;
+}
+
+#messages {
+    text-align: center;
+    color: black;
+    font-size: 18px;;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px;
 }
