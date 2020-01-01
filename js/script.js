@@ -1,5 +1,5 @@
 function printMessage(msg){
-	let div = document.createElement('div');
+	var div = document.createElement('div');
 	div.innerHTML = msg;
 	document.getElementById('messages').appendChild(div);
 }
@@ -40,10 +40,10 @@ function displayResult(argPlayerMove, argComputerMove) {
 function buttonClicked(argButtonName) {
   clearMessages();
   console.log(argButtonName + ' został kliknięty');
-  playerMove = argButtonName;
-  randomNumber = Math.floor(Math.random() * 3 + 1);
+  var playerMove = argButtonName;
+  var randomNumber = Math.floor(Math.random() * 3 + 1);
   console.log('wylosowana liczba to: ' + randomNumber);
-  computerMove = getMoveName(randomNumber);
+  var computerMove = getMoveName(randomNumber);
   console.log('ruch komputera to: ' + computerMove);
   displayResult(playerMove, computerMove);
 }
